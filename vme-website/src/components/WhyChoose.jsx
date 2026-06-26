@@ -59,7 +59,7 @@ function WhyChoose() {
 
   return (
     <section id="why" style={{ background: '#0D0D0F', padding: '100px 0' }}>
-      <div style={{ maxWidth: '1280px', margin: '0 auto', padding: '0 40px' }}>
+      <div style={{ maxWidth: '1280px', margin: '0 auto' }} className="px-5 md:px-10">
         {/* Heading */}
         <motion.div
           ref={titleRef}

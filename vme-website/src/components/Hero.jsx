@@ -89,8 +89,10 @@ function Hero() {
       }} />
 
       <div style={{
-        maxWidth: '1280px', margin: '0 auto', padding: '0 40px',
-        width: '100%', position: 'relative', zIndex: 2, paddingTop: '100px'
+        maxWidth: '1280px', margin: '0 auto', 
+        width: '100%', minWidth: 0, boxSizing: 'border-box', position: 'relative', zIndex: 2, 
+        paddingTop: 'clamp(140px, 22vh, 240px)', paddingBottom: '160px',
+        paddingLeft: 'clamp(20px, 5vw, 40px)', paddingRight: 'clamp(20px, 5vw, 40px)'
       }}>
         {/* Eyebrow label */}
         <motion.div
@@ -151,10 +153,8 @@ function Hero() {
 
         {/* Metric strip */}
         <motion.div
-          style={{
-            display: 'flex', gap: '48px', marginTop: '72px', paddingTop: '40px',
-            borderTop: '1px solid rgba(42,42,50,0.8)', flexWrap: 'wrap'
-          }}
+          className="flex flex-wrap gap-8 md:gap-12 lg:gap-16 border-t border-[rgba(42,42,50,0.8)]"
+          style={{ marginTop: 'clamp(4rem, 8vw, 5rem)', paddingTop: 'clamp(2rem, 4vw, 2.5rem)' }}
           initial={{ opacity: 1 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 2.2, duration: 0.8 }}

@@ -126,10 +126,17 @@ function Footer() {
               Contact
             </h4>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
-              <div style={{ fontFamily: 'Inter', fontSize: '0.875rem', color: '#7A7A8A', lineHeight: 1.6 }}>
+              <a 
+                href="https://www.google.com/maps?vet=10CAAQoqAOahcKEwjIjPnR7KSVAxUAAAAAHQAAAAAQEQ..i&rlz=1C1YTUH_en-GBIN1069IN1069&pvq=Cg0vZy8xMXJod2Q4aGt5&fvr=1&cs=1&um=1&ie=UTF-8&fb=1&gl=in&sa=X&ftid=0x3a5261b4a5f721a1:0xd7db723d2b1970fc"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ fontFamily: 'Inter', fontSize: '0.875rem', color: '#7A7A8A', lineHeight: 1.6, textDecoration: 'none', transition: 'color 0.3s' }}
+                onMouseEnter={e => e.currentTarget.style.color = '#F0F0F2'}
+                onMouseLeave={e => e.currentTarget.style.color = '#7A7A8A'}
+              >
                 No. 5, DK Garden, 9th Street<br />
                 Kovur, Chennai – 600 128
-              </div>
+              </a>
               <a href="mailto:velmuruganengi@gmail.com"
                 style={{ fontFamily: 'Inter', fontSize: '0.875rem', color: '#4D9FFF', textDecoration: 'none' }}>
                 velmuruganengi@gmail.com

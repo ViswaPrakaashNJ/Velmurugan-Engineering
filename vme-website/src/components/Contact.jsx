@@ -98,7 +98,7 @@ function Contact() {
 
   return (
     <section id="contact" className="contact-section" style={{ background: '#0D0D0F', padding: '100px 0' }}>
-      <div style={{ maxWidth: '1280px', margin: '0 auto', padding: '0 40px' }}>
+      <div style={{ maxWidth: '1280px', margin: '0 auto' }} className="px-5 md:px-10">
         {/* Heading */}
         <div className="section-label" style={{ textAlign: 'center' }}>Get In Touch</div>
         <h2 className="section-heading" style={{ textAlign: 'center', marginBottom: '16px' }}>
@@ -111,9 +111,7 @@ function Contact() {
           Tell us about your machining requirements and our engineering team will get back to you within 24 hours.
         </p>
 
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1.4fr', gap: '40px', alignItems: 'start' }}
-          className="contact-grid"
-        >
+        <div className="grid grid-cols-1 md:grid-cols-[1fr_1.4fr] gap-10 items-start">
           {/* Left: Contact Info */}
           <motion.div
             ref={infoRef}
@@ -159,22 +157,35 @@ function Contact() {
               </motion.div>
             ))}
 
-            {/* Map placeholder */}
+            {/* Map Embed */}
             <div style={{
-              marginTop: '24px', height: '140px', borderRadius: '8px', overflow: 'hidden',
-              border: '1px solid #2A2A32', position: 'relative',
-              background: 'linear-gradient(135deg, #1A1A2E, #16213E)',
-              display: 'flex', alignItems: 'center', justifyContent: 'center'
+              marginTop: '24px', height: '240px', borderRadius: '8px', overflow: 'hidden',
+              border: '1px solid #2A2A32', position: 'relative'
             }}>
-              <div style={{ textAlign: 'center' }}>
-                <MapPin size={32} color="#1E6FFF" style={{ margin: '0 auto 8px' }} />
-                <div style={{
-                  fontFamily: 'Rajdhani', fontWeight: 600, fontSize: '0.8rem',
-                  letterSpacing: '0.1em', textTransform: 'uppercase', color: '#7A7A8A'
-                }}>
-                  Kovur, Chennai — 600 128
-                </div>
-              </div>
+              <iframe
+                title="Velmurugan Engineering Location"
+                src="https://maps.google.com/maps?q=Velmurugan%20Engineering,%20Kovur,%20Chennai&t=&z=14&ie=UTF8&iwloc=&output=embed"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen=""
+                loading="lazy"
+              ></iframe>
+            </div>
+            <div style={{ marginTop: '12px', textAlign: 'right' }}>
+              <a 
+                href="https://www.google.com/maps?vet=10CAAQoqAOahcKEwjIjPnR7KSVAxUAAAAAHQAAAAAQEQ..i&rlz=1C1YTUH_en-GBIN1069IN1069&pvq=Cg0vZy8xMXJod2Q4aGt5&fvr=1&cs=1&um=1&ie=UTF-8&fb=1&gl=in&sa=X&ftid=0x3a5261b4a5f721a1:0xd7db723d2b1970fc"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  fontFamily: 'Inter', fontSize: '0.85rem', color: '#1E6FFF', textDecoration: 'none',
+                  display: 'inline-flex', alignItems: 'center', gap: '4px', transition: 'color 0.3s'
+                }}
+                onMouseEnter={e => e.currentTarget.style.color = '#4D9FFF'}
+                onMouseLeave={e => e.currentTarget.style.color = '#1E6FFF'}
+              >
+                Open in Google Maps <MapPin size={14} />
+              </a>
             </div>
           </motion.div>
 
@@ -231,7 +242,7 @@ function Contact() {
                     borderRadius: '8px', padding: '40px 32px'
                   }}
                 >
-                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px' }}>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                     <div className="form-group">
                       <label className="form-label" htmlFor="name">Full Name *</label>
                       <input
@@ -254,7 +265,7 @@ function Contact() {
                     </div>
                   </div>
 
-                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px' }}>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                     <div className="form-group">
                       <label className="form-label" htmlFor="phone">Phone Number *</label>
                       <input

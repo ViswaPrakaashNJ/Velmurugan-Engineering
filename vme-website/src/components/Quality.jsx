@@ -81,7 +81,7 @@ function Quality() {
       {/* QUALITY watermark */}
       <div className="quality-watermark">QUALITY</div>
 
-      <div style={{ maxWidth: '1280px', margin: '0 auto', padding: '0 40px', position: 'relative', zIndex: 2 }}>
+      <div style={{ maxWidth: '1280px', margin: '0 auto', position: 'relative', zIndex: 2 }} className="px-5 md:px-10">
         {/* Heading */}
         <div className="section-label">Our Standards</div>
         <h2 className="section-heading" style={{ marginBottom: '64px' }}>
@@ -89,9 +89,7 @@ function Quality() {
         </h2>
 
         {/* Two feature blocks */}
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '32px', marginBottom: '80px' }}
-          className="quality-grid"
-        >
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-20">
           {features.map((feature, i) => (
             <FeatureBlock key={feature.title} feature={feature} index={i} />
           ))}

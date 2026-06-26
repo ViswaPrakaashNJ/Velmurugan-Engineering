@@ -65,7 +65,7 @@ function ToolIllustration({ index }) {
 function Gallery() {
   return (
     <section id="gallery" style={{ background: '#0D0D0F', padding: '100px 0', overflow: 'hidden' }}>
-      <div style={{ maxWidth: '1280px', margin: '0 auto', padding: '0 40px', marginBottom: '48px' }}>
+      <div style={{ maxWidth: '1280px', margin: '0 auto', marginBottom: '48px' }} className="px-5 md:px-10">
         <div className="section-label">Precision in Every Cut</div>
         <h2 className="section-heading" style={{ fontSize: 'clamp(2.5rem, 6vw, 5rem)' }}>
           OUR WORK IN <span>STEEL</span>

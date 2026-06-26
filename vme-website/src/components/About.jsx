@@ -113,7 +113,7 @@ function About() {
 
   return (
     <section ref={sectionRef} id="about" style={{ background: '#161618', padding: '100px 0' }}>
-      <div style={{ maxWidth: '1280px', margin: '0 auto', padding: '0 40px' }}>
+      <div style={{ maxWidth: '1280px', margin: '0 auto' }} className="px-5 md:px-10">
         {/* Section label */}
         <div className="section-label">Who We Are</div>
 
@@ -145,7 +145,7 @@ function About() {
         </div>
 
         {/* Two-column layout */}
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '60px', alignItems: 'start' }}>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-[60px] items-start">
           {/* Left: Description */}
           <div>
             <p style={{

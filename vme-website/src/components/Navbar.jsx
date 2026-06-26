@@ -31,18 +31,18 @@ function Navbar() {
         <div style={{ maxWidth: '1280px', margin: '0 auto', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
           {/* Logo */}
           <a href="#" onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
-            style={{ display: 'flex', alignItems: 'center', gap: '12px', textDecoration: 'none' }}>
+            style={{ display: 'flex', alignItems: 'center', gap: '12px', textDecoration: 'none', flexShrink: 0 }}>
             <img src="/logo.png" alt="Velmurugan Engineering Logo" style={{ width: '40px', height: '40px', objectFit: 'contain' }} />
             <div>
               <div style={{
                 fontFamily: 'Rajdhani, sans-serif', fontWeight: 700, fontSize: '1.1rem',
-                letterSpacing: '0.12em', textTransform: 'uppercase', color: '#F0F0F2', lineHeight: 1
+                letterSpacing: '0.12em', textTransform: 'uppercase', color: '#F0F0F2', lineHeight: 1, whiteSpace: 'nowrap'
               }}>
                 Velmurugan
               </div>
               <div style={{
                 fontFamily: 'Rajdhani, sans-serif', fontWeight: 600, fontSize: '0.65rem',
-                letterSpacing: '0.2em', textTransform: 'uppercase', color: '#1E6FFF', lineHeight: 1.2
+                letterSpacing: '0.2em', textTransform: 'uppercase', color: '#1E6FFF', lineHeight: 1.2, whiteSpace: 'nowrap'
               }}>
                 Engineering
               </div>
@@ -50,7 +50,7 @@ function Navbar() {
           </a>
 
           {/* Desktop Nav */}
-          <div style={{ display: 'flex', alignItems: 'center', gap: '40px' }} className="hidden md:flex">
+          <div className="hidden lg:flex items-center gap-6 xl:gap-10">
             {navLinks.map(link => (
               <a key={link.href} href={link.href} className="nav-link"
                 onClick={(e) => { e.preventDefault(); handleNavClick(link.href); }}>
@@ -65,7 +65,7 @@ function Navbar() {
           {/* Mobile Toggle */}
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
-            className="md:hidden"
+            className="lg:hidden"
             style={{ background: 'none', border: 'none', color: '#F0F0F2', cursor: 'pointer', padding: '8px' }}
             aria-label="Toggle mobile menu"
           >
@@ -87,9 +87,9 @@ function Navbar() {
             />
             <motion.div
               className="mobile-drawer-panel"
-              initial={{ x: '-100%' }}
+              initial={{ x: '100%' }}
               animate={{ x: 0 }}
-              exit={{ x: '-100%' }}
+              exit={{ x: '100%' }}
               transition={{ type: 'tween', duration: 0.3 }}
             >
               <div style={{ display: 'flex', flexDirection: 'column', gap: '0' }}>
