@@ -35,14 +35,7 @@ function Footer() {
           {/* Brand column */}
           <div>
             <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '20px' }}>
-              <svg width="40" height="40" viewBox="0 0 80 80" fill="none">
-                <path
-                  d="M40 8 L45 19 L56 14 L54 26 L65 30 L58 40 L65 50 L54 54 L56 66 L45 61 L40 72 L35 61 L24 66 L26 54 L15 50 L22 40 L15 30 L26 26 L24 14 L35 19 Z"
-                  stroke="#1E6FFF" strokeWidth="2" fill="rgba(30,111,255,0.05)"
-                />
-                <circle cx="40" cy="40" r="14" stroke="#4D9FFF" strokeWidth="1.5" fill="none" />
-                <circle cx="40" cy="40" r="4" fill="#1E6FFF" />
-              </svg>
+              <img src="/logo.png" alt="Velmurugan Engineering Logo" style={{ width: '40px', height: '40px', objectFit: 'contain' }} />
               <div>
                 <div style={{
                   fontFamily: 'Rajdhani', fontWeight: 700, fontSize: '1.1rem',
